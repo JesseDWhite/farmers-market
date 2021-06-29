@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
+//import Datetime from 'react-datetime';
 
 function MarketCalendar() {
-  const [value, onChange] = useState(new Date());
-
+  const [value, setDateState] = useState(new Date());
+  const changeDate = (element) => {
+    setDateState(element)
+  }
   return (
-    <div>
-      <Calendar
-        onChange={onChange}
-        value={value}
-      />
-    </div>
+    <React.Fragment>
+      <div>
+        <Calendar
+          onChange={changeDate}
+          value={value}
+        />
+      </div>
+    </React.Fragment>
   );
 }
 
