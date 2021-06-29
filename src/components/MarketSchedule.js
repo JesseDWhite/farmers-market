@@ -1,6 +1,7 @@
 import React from "react";
+import Place from "./Place";
 
-const Schedule = [
+const schedule = [
   {
     day: "Sunday",
     location: "Lents International",
@@ -43,7 +44,7 @@ function MarketSchedule() {
   return (
     <React.Fragment>
       <hr />
-      {Schedule.map((place, index) =>
+      {schedule.map((place, index) =>
         <Place day={place.day}
           location={place.location}
           hours={place.hours}

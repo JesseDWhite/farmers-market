@@ -1,4 +1,5 @@
 import React from "react";
+import Season from "./Season";
 
 const produceInSeason = [
   {
@@ -269,6 +270,25 @@ const produceInSeason = [
   }
 ];
 
+// function Navmenu(props)
+// {
+//     const list = props.menuitems;
+
+//     const updatedList = list.map((listItems)=>{
+//         return <li>{listItems}</li>;
+//     });
+
+//     return(
+//         <ul>{updatedList}</ul>
+//     );
+// }
+
+// const veggies = produceInSeason.selection;
+// const displayAsList = veggies.map((oneVeg) =>
+//   <li>{oneVeg}</li>
+// );
+
+
 function AvailableProduce() {
   return (
     <React.Fragment>
@@ -277,9 +297,9 @@ function AvailableProduce() {
         <Season month={season.month}
           selection={season.selection} /* maybe make this an array-- we will see */
           key={index} />
-      )}
+      )};
     </React.Fragment>
-  );
-}
+  )
+};
 
 export default AvailableProduce;
